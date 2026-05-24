@@ -1,2 +1,44 @@
-data/raw/flights.csv
-data/processed/flights_model.parquet
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Data files (large datasets)
+data.zip
+data/raw/*
+data/processed/*
+*.csv
+*.parquet
+*.zip
+*.gz
+*.tar.gz
+
+# Model outputs, serialization and logs
+*.pkl
+*.pickle
+*.joblib
+outputs/pickles/
+outputs/relatorio.html
+
+# Generated HTML reports and maps
+*.html

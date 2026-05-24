@@ -1,5 +1,13 @@
 polars
-scikit-learn
 pyarrow
+pandas
+numpy
 matplotlib
 seaborn
+scikit-learn
+lightgbm
+joblib
+folium
+plotly
+nbformat
+ipykernel
