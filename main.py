@@ -5,13 +5,13 @@ from pathlib import Path
 # Adiciona o diretório raiz do projeto ao PYTHONPATH para garantir que o python encontre os módulos
 sys.path.append(str(Path(__file__).resolve().parent))
 
-from notebooks.eda import FlightEDA
-from notebooks.classificacao import FlightClassifier
-from notebooks.regressao import FlightRegressor
-from notebooks.clusterizacao import FlightClusterer
-from notebooks.mapa_geografico import FlightGeoMapper
-from notebooks.anomalias import FlightAnomalyDetector
-from notebooks.sazonalidade import FlightSeasonality
+from src.eda import FlightEDA
+from src.classificacao import FlightClassifier
+from src.regressao import FlightRegressor
+from src.clusterizacao import FlightClusterer
+from src.mapa_geografico import FlightGeoMapper
+from src.anomalias import FlightAnomalyDetector
+from src.sazonalidade import FlightSeasonality
 
 from reports import generate_report
 
