@@ -4,8 +4,8 @@ Dashboard interativo do Tech Challenge — Atrasos de Voos.
 Execute com:
     streamlit run dashboard.py
 
-O dashboard carrega os objetos treinados de outputs/pickles/ se existirem.
-Se não existirem, executa o pipeline completo (main.py) na primeira execução.
+O dashboard carrega os objetos treinados de outputs/pickles/.
+Em ambiente local, se os pickles não existirem, execute `python main.py` primeiro.
 """
 
 import sys
@@ -42,7 +42,7 @@ st.set_page_config(
 @st.cache_resource(show_spinner="Carregando modelos treinados...")
 def load_artifacts():
     """
-    Carrega objetos treinados de pickle. Se não existir, executa o pipeline.
+    Carrega objetos treinados de pickle.
 
     Returns
     -------
@@ -52,16 +52,12 @@ def load_artifacts():
     missing = [f for f in expected_files if not (PICKLES_DIR / f"{f}.pkl").exists()]
 
     if missing:
-        st.warning(
-            f"⚠ Pickles não encontrados: {missing}. "
-            "Executando o pipeline completo... isso pode demorar alguns minutos."
+        st.error(
+            f"❌ Artefatos não encontrados: {missing}\n\n"
+            "**Em ambiente local:** execute `python main.py` para gerar os pickles.\n\n"
+            "**Em produção:** certifique-se de que `outputs/pickles/` foi commitado no repositório."
         )
-        from main import main as run_pipeline
-        run_pipeline(
-            show_plots=False,
-            generate_html_report=False,
-            save_artifacts=True,
-        )
+        st.stop()
 
     artifacts = {}
     for name in expected_files:
@@ -635,6 +631,15 @@ def page_about():
     **Objetivo:** análise completa de atrasos em voos domésticos nos Estados Unidos
     no ano de 2015, abrangendo todas as fases de um projeto de ciência de dados.
 
+    ### 👥 Equipe
+
+    | Nome | E-mail |
+    | --- | --- |
+    | Doglas Parise | doglasparise@gmail.com |
+    | Mariana Teixeira Dornelles Parise | m.dornelles19@gmail.com |
+    | Ricardo Gomes de Souza | ricardo_g_souza@yahoo.com |
+    | Silvio José Meirelles | professorsilviomeireles@gmail.com |
+
     ### Dataset
     - **Origem:** U.S. Department of Transportation — Bureau of Transportation Statistics
     - **Ano:** 2015
@@ -655,7 +660,7 @@ def page_about():
     por uma análise específica:
 
     ```
-    notebooks/
+    src/
     ├── eda.py              ← Análise exploratória
     ├── classificacao.py    ← Logistic Regression + Random Forest
     ├── regressao.py        ← Linear + Decision Tree + LightGBM
@@ -664,9 +669,10 @@ def page_about():
     ├── anomalias.py        ← Isolation Forest + LOF + Silhouette
     └── sazonalidade.py     ← Padrões temporais multi-dimensão
 
-    main.py                 ← Orquestrador
-    dashboard.py            ← Este dashboard
+    notebooks/              ← Notebooks de validação de cada módulo
     reports/                ← Gerador de relatório HTML estático
+    main.py                 ← Orquestrador do pipeline
+    dashboard.py            ← Este dashboard
     ```
 
     ### Principais achados
@@ -681,6 +687,9 @@ def page_about():
     - Sem dados de clima (provavelmente o maior fator não modelado)
     - Sem efeito cascata (atraso anterior da mesma aeronave)
     - Apenas 1 ano de dados (2015)
+
+    ---
+
     """)
 
 
