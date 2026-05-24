@@ -33,12 +33,3 @@ data/processed/*
 *.gz
 *.tar.gz
 
-# Model outputs, serialization and logs
-*.pkl
-*.pickle
-*.joblib
-outputs/pickles/
-outputs/relatorio.html
-
-# Generated HTML reports and maps
-*.html

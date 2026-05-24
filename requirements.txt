@@ -11,3 +11,4 @@ folium
 plotly
 nbformat
 ipykernel
+streamlit>=1.30
