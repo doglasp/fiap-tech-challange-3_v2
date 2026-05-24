@@ -649,7 +649,7 @@ def page_about():
 
     ### Stack tecnológico
     - **Processamento:** Polars (DataFrame de alto desempenho)
-    - **Modelagem supervisionada:** scikit-learn, LightGBM
+    - **Modelagem supervisionada:** scikit-learn (LogisticRegression, RandomForest, LinearRegression, DecisionTree), LightGBM
     - **Modelagem não supervisionada:** scikit-learn (KMeans, IsolationForest, LOF, PCA)
     - **Visualização:** matplotlib, seaborn, plotly, folium
     - **Dashboard:** Streamlit
