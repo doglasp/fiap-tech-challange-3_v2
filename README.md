@@ -1,9 +1,19 @@
 # ✈️ Flight Delay ML — Tech Challenge 3
 
-> **FIAP Postech — Engenharia de Machine Learning**  
-> Análise completa de atrasos em voos domésticos nos EUA (2015)
+Pipeline completo de Machine Learning sobre o dataset público **2015 Flight Delays and Cancellations** (U.S. DOT), aplicando aprendizado supervisionado (classificação e regressão) e não-supervisionado (clusterização + PCA) para entender e prever atrasos em voos comerciais nos EUA.
 
----
+## Integrantes do Grupo
+
+| Nome | E-mail | Perfil Google Skills |
+| :--- | :--- | :---: |
+| **Doglas Parise** | [doglasparise@gmail.com](mailto:doglasparise@gmail.com) | [🔗 Skills Google](https://www.skills.google/public_profiles/c73ebebd-15ad-4883-97f3-02551573d9b9) |
+| **Mariana Teixeira Dornelles Parise** | [m.dornelles19@gmail.com](mailto:m.dornelles19@gmail.com) | [🔗 Skills Google](https://www.skills.google/public_profiles/c71a2add-704b-450f-9eba-2ebb17f39191) |
+| **Ricardo Gomes de Souza** | [ricardo_g_souza@yahoo.com](mailto:ricardo_g_souza@yahoo.com) | - |
+| **Silvio José Meirelles** | [professorsilviomeireles@gmail.com](mailto:professorsilviomeireles@gmail.com) | - |
+
+## Vídeo de apresentação
+
+[Link para vídeo de apresentação](#) <!-- preencher quando gravado -->
 
 ## 📋 Sobre o Projeto
 
