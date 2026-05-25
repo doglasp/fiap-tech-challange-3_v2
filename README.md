@@ -48,25 +48,40 @@ Este projeto realiza uma análise end-to-end de atrasos em **5,7 milhões de voo
 flight-delay-ml/
 ├── data/
 │   ├── raw/
-│   │   └── flights.csv             # Dataset bruto (não versionado)
+│   │   └── flights.csv
 │   └── processed/
-│       └── flights_model.parquet   # Dataset processado (gerado pelo EDA)
+│       └── flights_model.parquet
 │
-├── notebooks/
-│   ├── eda.py              # Análise Exploratória (FlightEDA)
-│   ├── classificacao.py    # Classificação binária (FlightClassifier)
-│   ├── regressao.py        # Regressão de minutos de atraso (FlightRegressor)
-│   ├── clusterizacao.py    # Clusterização de aeroportos (FlightClusterer)
-│   ├── mapa_geografico.py  # Visualizações geográficas (FlightGeoMapper)
-│   ├── anomalias.py        # Detecção de anomalias (FlightAnomalyDetector)
-│   └── sazonalidade.py     # Padrões temporais (FlightSeasonality)
+├── docs/
+│   └── arquitetura.md
+│
+├── src/                          # Classes do pipeline
+│   ├── eda.py                    # FlightEDA
+│   ├── classificacao.py          # FlightClassifier
+│   ├── regressao.py              # FlightRegressor
+│   ├── clusterizacao.py          # FlightClusterer
+│   ├── mapa_geografico.py        # FlightGeoMapper
+│   ├── anomalias.py              # FlightAnomalyDetector
+│   └── sazonalidade.py           # FlightSeasonality
+│
+├── notebooks/                    # Notebooks de teste/exploração
+│   ├── test_eda.ipynb
+│   ├── test_classificacao.ipynb
+│   ├── test_regressao.ipynb
+│   ├── test_clusterizacao.ipynb
+│   ├── test_mapa_geografico.ipynb
+│   ├── test_anomalias.ipynb
+│   └── test_sazonalidade.ipynb
 │
 ├── reports/
-│   └── __init__.py         # Gerador de relatório HTML estático
+│   ├── __init__.py
+│   ├── report_generator.py
+│   └── templates.py
 │
 ├── outputs/
-│   ├── relatorio.html      # Relatório HTML consolidado (gerado)
-│   └── pickles/            # Objetos treinados serializados (gerados)
+│   ├── relatorio.html
+│   ├── mapa_atrasos_heatmap.html
+│   └── pickles/
 │       ├── eda.pkl
 │       ├── clf.pkl
 │       ├── reg.pkl
@@ -76,9 +91,12 @@ flight-delay-ml/
 │       ├── season.pkl
 │       └── folium_map.html
 │
-├── main.py                 # Orquestrador do pipeline completo
-├── dashboard.py            # Dashboard interativo (Streamlit)
-└── requirements.txt        # Dependências do projeto
+├── main.py                       # Orquestrador do pipeline
+├── dashboard.py                  # Streamlit
+├── test_main.ipynb               # Notebook de teste do pipeline completo
+├── .gitignore
+├── README.md
+└── requirements.txt
 ```
 
 ---
