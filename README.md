@@ -15,6 +15,14 @@ Pipeline completo de Machine Learning sobre o dataset público **2015 Flight Del
 
 [Link para vídeo de apresentação](#) <!-- preencher quando gravado -->
 
+## 🚀 Dashboard Interativo
+
+Dashboard interativo do projeto disponível publicamente via Streamlit Cloud:
+
+🔗 **[fiap-mlet8-g37-tc3.streamlit.app](https://fiap-mlet8-g37-tc3.streamlit.app/)**
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://fiap-mlet8-g37-tc3.streamlit.app/)
+
 ## 📋 Sobre o Projeto
 
 Este projeto realiza uma análise end-to-end de atrasos em **5,7 milhões de voos domésticos** nos Estados Unidos no ano de 2015, cobrindo todas as etapas de um projeto de ciência de dados:
