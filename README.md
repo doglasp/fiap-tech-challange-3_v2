@@ -13,7 +13,7 @@ Pipeline completo de Machine Learning sobre o dataset público **2015 Flight Del
 
 ## Vídeo de apresentação
 
-[Link para vídeo de apresentação](#) <!-- preencher quando gravado -->
+[Link para vídeo de apresentação](https://www.youtube.com/watch?v=elHCaO40h_A)
 
 ## 🚀 Dashboard Interativo
 
